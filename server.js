@@ -58,6 +58,12 @@ app.get('/about', (req,res) => {
   })     //to render templates
 })
 
+app.get('/projects' , (req, res) =>{
+    res.render('projects.hbs', {
+        projectMessage: 'Portfolio listed here'
+    })
+})
+
 app.get('/bad', (req,res) => {
     res.send({
         errorMessage: 'Unable to fufill request'
